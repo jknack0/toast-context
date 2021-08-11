@@ -7,12 +7,14 @@ export const ToastContext = createContext({
 
 export const ToastProvider = (props) => {
   const [toast, setToast] = useState({
+    isOpen: false,
     message: '',
     type: '',
   });
 
   const handleShowToast = (message, type) => {
     setToast({
+      isOpen: true,
       message,
       type,
     });
@@ -23,7 +25,8 @@ export const ToastProvider = (props) => {
   const clearToast = () => {
     setToast({
       ...toast,
-      message: false,
+      isOpen: false,
+      message: '',
     });
   };
 

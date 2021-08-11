@@ -7,7 +7,7 @@ const Toast = () => {
   const { toast } = useToastContext();
 
   return (
-    <Snackbar open={!!toast.message}>
+    <Snackbar open={toast.isOpen}>
       <Alert severity={toast.type}>{toast.message}</Alert>
     </Snackbar>
   );
