@@ -30,7 +30,6 @@ export const ToastProvider = (props) => {
   const toastValue = {
     toast,
     handleShowToast: handleShowToast,
-    handleToastClose: clearToast
   };
 
   return (
